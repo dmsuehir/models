@@ -59,12 +59,9 @@ class BaseModelInitializer(object):
             print("Current directory: {}".format(os.getcwd()))
             print("Running: {}".format(str(cmd)))
 
-        try:
-            import tensorflow as tf
-            print("TensorFlow version: {}".format(str(tf.__version__)))
-            print("Is MKL enabled: {}".format(str(tf.pywrap_tensorflow.IsMklEnabled())))
-        except:
-            pass
+        import tensorflow as tf
+        print("TensorFlow version: {}".format(str(tf.__version__)))
+        print("Is MKL enabled: {}".format(str(tf.pywrap_tensorflow.IsMklEnabled())))
 
         os.system(cmd)
 
