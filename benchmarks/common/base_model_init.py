@@ -60,7 +60,7 @@ class BaseModelInitializer(object):
             print("Running: {}".format(str(cmd)))
 
         import tensorflow as tf
-        print("TensorFlow version: {}".format(str(tf.__version__)))
+        #print("TensorFlow version: {}".format(str(tf.__version__)))
         print("Is MKL enabled: {}".format(str(tf.pywrap_tensorflow.IsMklEnabled())))
 
         os.system(cmd)
