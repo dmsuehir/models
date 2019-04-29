@@ -211,3 +211,6 @@ if __name__ == "__main__":
       break
 
   print("Average throughput for batch size {0}: {1} images/sec".format(batch_size, total_images / total_time))
+
+  print("TensorFlow version: {}".format(str(tf.__version__)))
+  print("MKL Enabled in TensorFlow: {}".format(str(tf.pywrap_tensorflow.IsMklEnabled())))

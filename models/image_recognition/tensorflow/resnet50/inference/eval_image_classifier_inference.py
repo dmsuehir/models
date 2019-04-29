@@ -255,6 +255,10 @@ class eval_classifier_optimized_graph:
                   % (num_processed_images, total_accuracy1 / num_processed_images,
                      total_accuracy5 / num_processed_images))
 
+    print("TensorFlow version: {}".format(str(tf.__version__)))
+    print("MKL Enabled in TensorFlow: {}".format(str(tf.pywrap_tensorflow.IsMklEnabled())))
+
+
   def validate_args(self):
     """validate the arguments"""
 
