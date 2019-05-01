@@ -64,6 +64,10 @@ def check_positive_number_or_equal_to_negative_one(value):
 def check_valid_filename(value):
     """verifies filename exists and isn't a link"""
     if value is not None:
+        # allow google cloud storage path to go through
+        if value.startswith("gs://"):
+            return value
+
         if not os.path.isfile(value):
             raise ArgumentTypeError("{} does not exist or is not a file.".
                                     format(value))
